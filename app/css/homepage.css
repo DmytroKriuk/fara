@@ -1,0 +1,248 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype"); }
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto";
+  background: #E5E5E5; }
+
+.header {
+  width: 100%;
+  background-color: #fff;
+  margin-top: -10px; }
+
+.header-main {
+  width: 100%;
+  background-color: #fff;
+  max-width: 1795px;
+  margin: 0 auto; }
+
+.header-top {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between; }
+  .header-top .headertop-first-list {
+    list-style: none;
+    display: flex; }
+    .header-top .headertop-first-list .header-top-menu-item {
+      padding-right: 84px;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 18px;
+      cursor: pointer;
+      color: #333333; }
+  .header-top .header-top-second-btn {
+    display: flex;
+    position: relative;
+    height: 50px;
+    align-items: center;
+    cursor: pointer; }
+    .header-top .header-top-second-btn .header-top-phone::before {
+      content: url(../img/icons/phone.svg);
+      position: relative;
+      margin-right: 10px; }
+    .header-top .header-top-second-btn .header-top-phone {
+      margin-left: 14px;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 18px;
+      color: #333333; }
+    .header-top .header-top-second-btn .header-second-arrow-down {
+      padding-left: 10px; }
+    .header-top .header-top-second-btn .header-second-arrow-up {
+      display: none;
+      padding-left: 10px; }
+  .header-top .header-top-second {
+    position: relative; }
+  .header-top .header-top-second-content {
+    border: 1px solid #F2F2F2;
+    display: none;
+    left: -32px;
+    position: absolute;
+    min-width: 340px;
+    z-index: 1; }
+  .header-top .dropdown-city {
+    margin: 0;
+    margin-top: 24px;
+    text-transform: uppercase;
+    padding-left: 26px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #828282; }
+  .header-top .show {
+    display: block;
+    z-index: 10;
+    background-color: #fff; }
+  .header-top .dropdown-item-container {
+    padding: 24px 66px 24px 22px; }
+  .header-top .dropdown-item-phone {
+    list-style: none;
+    margin-top: 0px;
+    margin-top: 24px;
+    padding-left: 15px; }
+  .header-top .dropdown-phone-item {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    color: #000000; }
+  .header-top .dropdown-phone-item:nth-child(2) {
+    margin-top: 12px; }
+  .header-top .dropdown-item {
+    display: flex;
+    border-bottom: 1px solid #F2F2F2;
+    align-items: flex-start; }
+  .header-top .dropdown-item img {
+    margin-left: 30px;
+    margin-top: 26px; }
+  .header-top .dropdow-item-city {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #828282; }
+  .header-top .header-top-third {
+    display: flex;
+    align-items: center; }
+    .header-top .header-top-third .header-top-curr {
+      margin-right: 37px; }
+    .header-top .header-top-third .header-top-lang {
+      margin-left: 36px; }
+    .header-top .header-top-third .header-top-lang, .header-top .header-top-third .header-top-curr {
+      border: none;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      outline: none !important;
+      color: #333333; }
+    .header-top .header-top-third .contactus {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      color: #333333; }
+    .header-top .header-top-third .contactus::before {
+      content: url(../img/icons/mail1.svg);
+      position: relative;
+      margin-right: 10px;
+      margin-top: 3px; }
+
+.header-bottom {
+  margin-top: 19px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+  .header-bottom .header-icons-container {
+    display: flex;
+    margin-left: -200px; }
+  .header-bottom .search {
+    display: flex;
+    margin-left: -136px;
+    width: 60%;
+    max-width: 1017px; }
+  .header-bottom .header-bottom-signin {
+    display: flex;
+    margin-right: 48px;
+    align-items: center; }
+  .header-bottom .header-icons2 {
+    display: flex; }
+  .header-bottom .header-icons1 {
+    margin-right: 40px; }
+  .header-bottom .header-icons1-item {
+    margin-top: 8px; }
+  .header-bottom .header-icons1-item:first-child {
+    padding: 0px 20px; }
+  .header-bottom .search-input {
+    width: 100%;
+    max-width: 977px;
+    margin-right: -4px;
+    padding-top: 11px;
+    padding-bottom: 12px;
+    padding-left: 18px;
+    border: none;
+    outline: none;
+    border: 1px solid #E0E0E0; }
+  .header-bottom .header-sing-in {
+    margin: 0;
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: #828282; }
+  .header-bottom .header-search {
+    background: #F37C00;
+    border: none;
+    outline: none;
+    padding: 11px 13px 10px 12px;
+    border-radius: 0px 2px 2px 0px; }
+  .header-bottom .icon-number {
+    color: #fff;
+    background-color: #F37C00;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%; }
+  .header-bottom .header-icons2-item {
+    position: relative;
+    margin: 0px 20px; }
+    .header-bottom .header-icons2-item .icon-number {
+      position: absolute;
+      left: 16px;
+      top: -5px; }
+
+.catalog-navblock-container {
+  background-color: #E5E5E5; }
+
+.catalog-navblock {
+  width: 100%;
+  max-width: 1795px;
+  margin: 36px auto 0 auto; }
+
+.catalog-navblock-side-menu {
+  background-color: #fff;
+  width: 331px;
+  height: 460px;
+  margin-top: 36px;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+.catalog-sidemenu-content-item:hover p {
+  color: #F37C00; }
+
+.catalog-sidemenu-content-item:hover svg path {
+  fill: #F37C00; }
+
+.catalog-sidemenu-content-item:hover svg {
+  fill: #F37C00; }
+
+.catalog-sidemenu-content {
+  padding: 36px 34px 40px 19px; }
+
+::-webkit-scrollbar {
+  width: 5px; }
+
+::-webkit-scrollbar-thumb {
+  background: #F37C00; }
+
+::-webkit-scrollbar-track {
+  background: #C4C4C4; }
+
+.sidemenu-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+  color: #000000;
+  margin-left: 10px; }
+
+.catalog-sidemenu-content-item {
+  display: flex;
+  height: 24;
+  justify-content: space-between;
+  align-items: center; }
+  .catalog-sidemenu-content-item .sidemenu-left {
+    display: flex;
+    align-items: center; }
