@@ -4,15 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/8da4a4becf.js" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
     <script src="js/libs.min.js"></script>
     <title>Головна</title>
 </head>
 <body>
  <!-- header -->
+ <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+     <div class="user">
+         <div class="user-first">
+             <img src="img/nophoto.png" alt="" >
+             <p class="user-name">User</p>
+         </div>
+         <div class="user-second">
+             <select class="user-second-select">
+                 <option value="UA">UA</option>
+                 <option value="RUS">RUS</option>
+             </select>
+         </div>
+         <div class="user-third">
+             <img src="img/icons/mail1.svg" alt="">
+             <p class="burger-connect">Зв'язатися з нами</p>
+         </div>
+     </div>
+     <hr>
+     <hr>
+     <ul class="burger-list">
+         <li class="burger-list-item"><a href="#"><span><img src="img/burger/basket.svg" alt=""></span>Кошик</a></li>
+         <li class="burger-list-item"><a href="#"><span><img src="img/burger/scales.svg" alt=""></span>Порівняння</a></li>
+         <li class="burger-list-item"><a href="#"><span><img src="img/burger/start.svg" alt=""></span>Обрані</a></li>
+         <li class="burger-list-item"><a href="#"><span><img src="img/burger/sale.svg" alt=""></span>Акція</a></li>
+         <li class="burger-list-item"><a href="#"><span><img src="img/burger/new.svg" alt=""></span>Новинка</a></li>
+         <li class="burger-list-item"><a href="#"><span><img src="img/burger/heart.svg" alt=""></span>Популярні</a></li>
+         <li class="burger-list-item"><a href="#"><span><img src="img/burger/clock.svg" alt=""></span>Замовлення</a></li>
+         <li class="burger-list-item"><a href="#"><span><img src="img/burger/setting-mobile.svg" alt=""></span>Налаштування</a></li>
+         <li class="burger-list-item"><a href="#"><span><img src="img/burger/exit-mobile.svg" alt=""></span>Вихід</a></li>
+     </ul>
+
+<p class="individual">Индивидуальное соглашение с покупателем</p>
+<hr>
+<div class="limit">
+<p class="limit-title">Ліміт</p>
+<div class="limit-price">0,00 грн</div>
+</div>
+<div class="borg">
+    <p class="borg-title">Заборгованість </p>
+    <div class="borg-price">0,00 грн</div>
+</div>
+<div class="out-of-termin">
+    <p class="termin-title">Протерміновано</p>
+   
+</div>
+<div class="total">
+    <div class="balance">Перейти до балансів</div>
+</div>
+<hr>
+<div class="user-acc">
+    <img src="img/nophoto.png" alt="" class="user-acc-img">
+    <p class="user-acc-title">Чернеженко Володимир Миколайович</p>
+</div>
+<hr>
+<ul class="burger-navlist">
+    <li class="burger-navlist-item"><a href="#">Каталог</a></li>
+    <li class="burger-navlist-item"><a href="#">Про компанію</a></li>
+    <li class="burger-navlist-item"><a href="#">Доставка та оплата</a></li>
+    <li class="burger-navlist-item"><a href="#">Контакти</a></li>
+    <li class="burger-navlist-item"><a href="#">Новини</a></li>
+</ul>
+
+    </div>
+  </div>
+
 <div class="header">
+    
     <header class="header-main">
      <div class="header-top">
+        <div class="burger-icon" onclick="openNav()"><i class="fas fa-bars"></i></div>
+        <img src="img/Logo.png" alt="" class="top-logo" style="display: none;">
          <div class="header-top-first">
              <ul class="headertop-first-list">
                  <li class="header-top-menu-item"><a>Каталог</a></li>
@@ -144,14 +215,20 @@
 
  <!-- end of header -->
 
+
+
+
+
+
+
  <!-- block1 -->
  <div class="catalog-navblock-container">
      <div class="catalog-navblock">
      <!-- sidemenu -->
-     <div class="catalog-navblock-side-menu">
+    <div class="catalog-navblock-side-menu">
          <div class="catalog-sidemenu-content">
 
-             <div class="catalog-sidemenu-content-item">
+             <div class="catalog-sidemenu-content-item" onmouseover="showSideBar()" >
                 <div class="sidemenu-left">
                     <svg width="16" height="20"  xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.209 2.00001H8.52112C7.91447 1.9985 7.32125 2.17853 6.81775 2.51694C6.31426 2.85535 5.92353 3.33666 5.69582 3.89896L5.46255 4.4709H0.666626V19.1868H14.6666V6.45786C14.6653 5.27601 14.1953 4.14293 13.3596 3.30721C12.5239 2.4715 11.3908 2.00138 10.209 2.00001ZM1.10731 18.7461V4.91159H5.28279L3.56039 9.13447C3.30849 9.77988 3.17947 10.4667 3.17996 11.1595V18.7461H1.10731ZM14.2259 18.7461H3.62064V11.1595C3.62009 10.5226 3.73846 9.89124 3.96967 9.29779L6.10381 4.0655C6.29862 3.58439 6.63292 3.17257 7.06371 2.88301C7.4945 2.59345 8.00207 2.43941 8.52112 2.4407H10.209C11.274 2.44192 12.2951 2.86555 13.0481 3.61866C13.8012 4.37177 14.2248 5.39284 14.2259 6.45786V18.7461Z" fill="black" stroke="black" stroke-width="0.8"/>
@@ -284,10 +361,96 @@
                 </div>
              </div>
          </div>
-     </div>
-     <!-- end of side menu -->
-     <div class="main-slider">
+     </div> 
 
+
+
+     <!-- end of side menu -->
+     <div class="sidepopup" id="sidepopup" onmouseout="hideSideBar()">
+         <div class="sidepopup-container">
+             <div class="sidepopup-container-item">
+                 <img src="img/menu-products/vigimnoi.png" alt="" class="sidepopup-container-item-img">
+                 <hr class="sidepopup-item-line">
+                 <p class="sidepopup-item-title">Выжимные подшипники</p>
+             </div>
+             <div class="sidepopup-container-item">
+                <img src="img/menu-products/main-pairs.png" alt="" class="sidepopup-container-item-img">
+                <hr class="sidepopup-item-line">
+                <p class="sidepopup-item-title">Главные пары</p>
+             </div>
+             <div class="sidepopup-container-item">
+                <img src="img/menu-products/cilindrs.png" alt="" class="sidepopup-container-item-img">
+                <hr class="sidepopup-item-line">
+                <p class="sidepopup-item-title">Главные цилиндры сцепления</p>
+             </div>
+             <div class="sidepopup-container-item">
+                <img src="img/menu-products/disk-stsepleniya.png" alt="" class="sidepopup-container-item-img">
+                <hr class="sidepopup-item-line">
+                <p class="sidepopup-item-title">Диски сцепления</p>
+             </div>
+
+             <div class="sidepopup-container-item">
+                <img src="img/menu-products/basket-scepleniya.png" alt="" class="sidepopup-container-item-img">
+                <hr class="sidepopup-item-line">
+                <p class="sidepopup-item-title">Корзины сцепления</p>
+             </div>
+             <div class="sidepopup-container-item">
+                <img src="img/menu-products/crests.png" alt="" class="sidepopup-container-item-img">
+                <hr class="sidepopup-item-line">
+                <p class="sidepopup-item-title">Крестовины</p>
+             </div>
+             <div class="sidepopup-container-item">
+                <img src="img/menu-products/mahoviki.png" alt="" class="sidepopup-container-item-img">
+                <hr class="sidepopup-item-line">
+                <p class="sidepopup-item-title">Маховики</p>
+             </div>
+             <div class="sidepopup-container-item">
+                <img src="img/menu-products/kpp.png" alt="" class="sidepopup-container-item-img">
+                <hr class="sidepopup-item-line">
+                <p class="sidepopup-item-title">Наконечники тяги КПП</p>
+             </div>
+
+
+             <div class="sidepopup-container-item">
+                <img src="img/menu-products/working-cilindrs.png" alt="" class="sidepopup-container-item-img">
+                <hr class="sidepopup-item-line">
+                <p class="sidepopup-item-title">Рабочие цилиндры сцепления</p>
+             </div>
+             <div class="sidepopup-container-item">
+                <img src="img/menu-products/other-menu.png" alt="" class="sidepopup-container-item-img">
+                <hr class="sidepopup-item-line">
+                <p class="sidepopup-item-title">Разное</p>
+             </div>
+             <div class="sidepopup-container-item">
+                <img src="img/menu-products/remcomplects.png" alt="" class="sidepopup-container-item-img">
+                <hr class="sidepopup-item-line">
+                <p class="sidepopup-item-title">Ремкомплекты кулисы</p>
+             </div>
+             <div class="sidepopup-container-item">
+                <img src="img/menu-products/handskpp.png" alt="" class="sidepopup-container-item-img">
+                <hr class="sidepopup-item-line">
+                <p class="sidepopup-item-title">Ручки КПП</p>
+             </div>
+
+             <div class="sidepopup-container-item">
+                <img src="img/menu-products/shlang.png" alt="" class="sidepopup-container-item-img">
+                <hr class="sidepopup-item-line">
+                <p class="sidepopup-item-title">Шланги сцепления</p>
+             </div>
+
+
+         </div>
+     </div>
+     <div class="mainslider">
+        <div class="main-slider-item">
+            <img src="img/slider1.png" alt="">
+        </div>
+        <div class="main-slider-item">
+            <img src="img/slider1.png" alt="">
+        </div>
+        <div class="main-slider-item">
+            <img src="img/slider1.png" alt="">
+        </div>
      </div>
  </div>
  </div>
@@ -296,13 +459,686 @@
 
 
  <!-- brends -->
- <div class="brend-container">
+ <div class="brend-containerall">
+<h4 class="sale-title">Акційні товари</h4>
+
+<div class="brend-container">
+
+<div class="brend-container1">
+    <div class="brend-container__item">
+        <div class="brend-container__item-top">
+            <img src="img/products/20orange.svg" alt="sale 20%" class="sale-icon">
+            <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+            <div class="brend-container__item-icons">
+                <img src="img/star-orange.png" alt="" class="product-icon">
+                <img src="img/icons/ваги.svg" alt="" class="product-icon">
+            </div>
+        </div>
+        <div class="brend-container__item-second">
+            <p class="articul">Артикул <span>01-02-00-1077</span></p>
+            <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+            <hr>
+            <p class="brand">Бренд <span>YNY</span></p>
+            <p class="presence">Есть в наличии</p>
+            <p class="price">264,00 <span>UAH</span></p>
+            <hr>
+            <div class="produc-button">
+                <input type="number" class="product-num" min="1">
+                <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+               
+            </div>
+            <button class="one-click">Купить в 1 клик</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="brend-container1">
+    <div class="brend-container__item">
+        <div class="brend-container__item-top">
+            <img src="img/products/20orange.svg" alt="sale 20%" class="sale-icon">
+            <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+            <div class="brend-container__item-icons">
+                <img src="img/star-orange.png" alt="" class="product-icon">
+                <img src="img/icons/ваги.svg" alt="" class="product-icon">
+            </div>
+        </div>
+        <div class="brend-container__item-second">
+            <p class="articul">Артикул <span>01-02-00-1077</span></p>
+            <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+            <hr>
+            <p class="brand">Бренд <span>YNY</span></p>
+            <p class="presence">Есть в наличии</p>
+            <p class="price">264,00 <span>UAH</span></p>
+            <hr>
+            <div class="produc-button">
+                <input type="number" class="product-num" min="1">
+                <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+               
+            </div>
+            <button class="one-click">Купить в 1 клик</button>
+        </div>
+    </div>
+</div>
+
+<div class="brend-container1">
+    <div class="brend-container__item">
+        <div class="brend-container__item-top">
+            <img src="img/products/20orange.svg" alt="sale 20%" class="sale-icon">
+            <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+            <div class="brend-container__item-icons">
+                <img src="img/star-orange.png" alt="" class="product-icon">
+                <img src="img/icons/ваги.svg" alt="" class="product-icon">
+            </div>
+        </div>
+        <div class="brend-container__item-second">
+            <p class="articul">Артикул <span>01-02-00-1077</span></p>
+            <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+            <hr>
+            <p class="brand">Бренд <span>YNY</span></p>
+            <p class="presence">Есть в наличии</p>
+            <p class="price">264,00 <span>UAH</span></p>
+            <hr>
+            <div class="produc-button">
+                <input type="number" class="product-num" min="1">
+                <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+            </div>
+            <button class="one-click">Купить в 1 клик</button>
+        </div>
+    </div>
+    </div>
+
+    <div class="brend-container1">
+        <div class="brend-container__item">
+            <div class="brend-container__item-top">
+                <img src="img/products/20orange.svg" alt="sale 20%" class="sale-icon">
+                <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+                <div class="brend-container__item-icons">
+                    <img src="img/star-orange.png" alt="" class="product-icon">
+                    <img src="img/icons/ваги.svg" alt="" class="product-icon">
+                </div>
+            </div>
+            <div class="brend-container__item-second">
+                <p class="articul">Артикул <span>01-02-00-1077</span></p>
+                <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+                <hr>
+                <p class="brand">Бренд <span>YNY</span></p>
+                <p class="presence">Есть в наличии</p>
+                <p class="price">264,00 <span>UAH</span></p>
+                <hr>
+                <div class="produc-button">
+                    <input type="number" class="product-num" min="1">
+                    <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+                </div>
+                <button class="one-click">Купить в 1 клик</button>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="brend-container1">
+            <div class="brend-container__item">
+                <div class="brend-container__item-top">
+                    <img src="img/products/20orange.svg" alt="sale 20%" class="sale-icon">
+                    <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+                    <div class="brend-container__item-icons">
+                        <img src="img/star-orange.png" alt="" class="product-icon">
+                        <img src="img/icons/ваги.svg" alt="" class="product-icon">
+                    </div>
+                </div>
+                <div class="brend-container__item-second">
+                    <p class="articul">Артикул <span>01-02-00-1077</span></p>
+                    <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+                    <hr>
+                    <p class="brand">Бренд <span>YNY</span></p>
+                    <p class="presence">Есть в наличии</p>
+                    <p class="price">264,00 <span>UAH</span></p>
+                    <hr>
+                    <div class="produc-button">
+                        <input type="number" class="product-num" min="1">
+                        <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+                    </div>
+                    <button class="one-click">Купить в 1 клик</button>
+                </div>
+            </div>
+            </div>
+
+            <div class="brend-container1">
+                <div class="brend-container__item">
+                    <div class="brend-container__item-top">
+                        <img src="img/products/20orange.svg" alt="sale 20%" class="sale-icon">
+                        <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+                        <div class="brend-container__item-icons">
+                            <img src="img/star-orange.png" alt="" class="product-icon">
+                            <img src="img/icons/ваги.svg" alt="" class="product-icon">
+                        </div>
+                    </div>
+                    <div class="brend-container__item-second">
+                        <p class="articul">Артикул <span>01-02-00-1077</span></p>
+                        <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+                        <hr>
+                        <p class="brand">Бренд <span>YNY</span></p>
+                        <p class="presence">Есть в наличии</p>
+                        <p class="price">264,00 <span>UAH</span></p>
+                        <hr>
+                        <div class="produc-button">
+                            <input type="number" class="product-num" min="1">
+                            <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+                        </div>
+                        <button class="one-click">Купить в 1 клик</button>
+                    </div>
+                </div>
+                </div>
+</div>
 
  </div>
+
+
+
+ <!-- news -->
+ <div class="news-containerall">
+    <h4 class="news-title">Новинки ассортимента</h4>
+    
+    <div class="news-container">
+    
+    <div class="news-container1">
+        <div class="news-container__item">
+            <div class="news-container__item-top">
+                <img src="img/products/20green.svg" alt="sale 20%" class="sale-icon">
+                <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+                <div class="brend-container__item-icons">
+                    <img src="img/star-orange.png" alt="" class="product-icon">
+                    <img src="img/icons/ваги.svg" alt="" class="product-icon">
+                </div>
+            </div>
+            <div class="news-container__item-second">
+                <p class="articul">Артикул <span>01-02-00-1077</span></p>
+                <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+                <hr>
+                <p class="brand">Бренд <span>YNY</span></p>
+                <p class="presence">Есть в наличии</p>
+                <p class="price">264,00 <span>UAH</span></p>
+                <hr>
+                <div class="produc-button">
+                    <input type="number" class="product-num" min="1">
+                    <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+                   
+                </div>
+                <button class="one-click">Купить в 1 клик</button>
+            </div>
+        </div>
+    </div>
+    
+    
+     
+    <div class="news-container1">
+        <div class="news-container__item">
+            <div class="news-container__item-top">
+                <img src="img/products/20green.svg" alt="sale 20%" class="sale-icon">
+                <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+                <div class="brend-container__item-icons">
+                    <img src="img/star-orange.png" alt="" class="product-icon">
+                    <img src="img/icons/ваги.svg" alt="" class="product-icon">
+                </div>
+            </div>
+            <div class="news-container__item-second">
+                <p class="articul">Артикул <span>01-02-00-1077</span></p>
+                <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+                <hr>
+                <p class="brand">Бренд <span>YNY</span></p>
+                <p class="presence">Есть в наличии</p>
+                <p class="price">264,00 <span>UAH</span></p>
+                <hr>
+                <div class="produc-button">
+                    <input type="number" class="product-num" min="1">
+                    <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+                   
+                </div>
+                <button class="one-click">Купить в 1 клик</button>
+            </div>
+        </div>
+    </div>
+    
+    
+     
+    <div class="news-container1">
+        <div class="news-container__item">
+            <div class="news-container__item-top">
+                <img src="img/products/20green.svg" alt="sale 20%" class="sale-icon">
+                <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+                <div class="brend-container__item-icons">
+                    <img src="img/star-orange.png" alt="" class="product-icon">
+                    <img src="img/icons/ваги.svg" alt="" class="product-icon">
+                </div>
+            </div>
+            <div class="news-container__item-second">
+                <p class="articul">Артикул <span>01-02-00-1077</span></p>
+                <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+                <hr>
+                <p class="brand">Бренд <span>YNY</span></p>
+                <p class="presence">Есть в наличии</p>
+                <p class="price">264,00 <span>UAH</span></p>
+                <hr>
+                <div class="produc-button">
+                    <input type="number" class="product-num" min="1">
+                    <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+                   
+                </div>
+                <button class="one-click">Купить в 1 клик</button>
+            </div>
+        </div>
+    </div>
+    
+      
+    <div class="news-container1">
+        <div class="news-container__item">
+            <div class="news-container__item-top">
+                <img src="img/products/20green.svg" alt="sale 20%" class="sale-icon">
+                <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+                <div class="brend-container__item-icons">
+                    <img src="img/star-orange.png" alt="" class="product-icon">
+                    <img src="img/icons/ваги.svg" alt="" class="product-icon">
+                </div>
+            </div>
+            <div class="news-container__item-second">
+                <p class="articul">Артикул <span>01-02-00-1077</span></p>
+                <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+                <hr>
+                <p class="brand">Бренд <span>YNY</span></p>
+                <p class="presence">Есть в наличии</p>
+                <p class="price">264,00 <span>UAH</span></p>
+                <hr>
+                <div class="produc-button">
+                    <input type="number" class="product-num" min="1">
+                    <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+                   
+                </div>
+                <button class="one-click">Купить в 1 клик</button>
+            </div>
+        </div>
+    </div>
+    
+    
+             
+    <div class="news-container1">
+        <div class="news-container__item">
+            <div class="news-container__item-top">
+                <img src="img/products/20green.svg" alt="sale 20%" class="sale-icon">
+                <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+                <div class="brend-container__item-icons">
+                    <img src="img/star-orange.png" alt="" class="product-icon">
+                    <img src="img/icons/ваги.svg" alt="" class="product-icon">
+                </div>
+            </div>
+            <div class="news-container__item-second">
+                <p class="articul">Артикул <span>01-02-00-1077</span></p>
+                <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+                <hr>
+                <p class="brand">Бренд <span>YNY</span></p>
+                <p class="presence">Есть в наличии</p>
+                <p class="price">264,00 <span>UAH</span></p>
+                <hr>
+                <div class="produc-button">
+                    <input type="number" class="product-num" min="1">
+                    <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+                   
+                </div>
+                <button class="one-click">Купить в 1 клик</button>
+            </div>
+        </div>
+    </div>
+    
+    
+                 
+    <div class="news-container1">
+        <div class="news-container__item">
+            <div class="news-container__item-top">
+                <img src="img/products/20green.svg" alt="sale 20%" class="sale-icon">
+                <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+                <div class="brend-container__item-icons">
+                    <img src="img/star-orange.png" alt="" class="product-icon">
+                    <img src="img/icons/ваги.svg" alt="" class="product-icon">
+                </div>
+            </div>
+            <div class="news-container__item-second">
+                <p class="articul">Артикул <span>01-02-00-1077</span></p>
+                <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+                <hr>
+                <p class="brand">Бренд <span>YNY</span></p>
+                <p class="presence">Есть в наличии</p>
+                <p class="price">264,00 <span>UAH</span></p>
+                <hr>
+                <div class="produc-button">
+                    <input type="number" class="product-num" min="1">
+                    <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+                   
+                </div>
+                <button class="one-click">Купить в 1 клик</button>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    
+     </div>
+    
+ <!-- /news -->
+
+ <!-- popular -->
+ <div class="popular-containerall">
+    <h4 class="popular-title">Популярні товари</h4>
+    
+    <div class="popular-container">
+    
+        <div class="news-container1">
+            <div class="news-container__item">
+                <div class="news-container__item-top">
+                    <img src="img/like.svg" alt="sale 20%" class="sale-icon">
+                    <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+                    <div class="brend-container__item-icons">
+                        <img src="img/star-orange.png" alt="" class="product-icon">
+                        <img src="img/icons/ваги.svg" alt="" class="product-icon">
+                    </div>
+                </div>
+                <div class="news-container__item-second">
+                    <p class="articul">Артикул <span>01-02-00-1077</span></p>
+                    <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+                    <hr>
+                    <p class="brand">Бренд <span>YNY</span></p>
+                    <p class="presence">Есть в наличии</p>
+                    <p class="price">264,00 <span>UAH</span></p>
+                    <hr>
+                    <div class="produc-button">
+                        <input type="number" class="product-num" min="1">
+                        <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+                       
+                    </div>
+                    <button class="one-click">Купить в 1 клик</button>
+                </div>
+            </div>
+        </div>
+    
+    
+     
+    <div class="news-container1">
+        <div class="news-container__item">
+            <div class="news-container__item-top">
+                <img src="img/like.svg" alt="sale 20%" class="sale-icon">
+                <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+                <div class="brend-container__item-icons">
+                    <img src="img/star-orange.png" alt="" class="product-icon">
+                    <img src="img/icons/ваги.svg" alt="" class="product-icon">
+                </div>
+            </div>
+            <div class="news-container__item-second">
+                <p class="articul">Артикул <span>01-02-00-1077</span></p>
+                <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+                <hr>
+                <p class="brand">Бренд <span>YNY</span></p>
+                <p class="presence">Есть в наличии</p>
+                <p class="price">264,00 <span>UAH</span></p>
+                <hr>
+                <div class="produc-button">
+                    <input type="number" class="product-num" min="1">
+                    <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+                   
+                </div>
+                <button class="one-click">Купить в 1 клик</button>
+            </div>
+        </div>
+    </div>
+    
+    
+     
+    <div class="news-container1">
+        <div class="news-container__item">
+            <div class="news-container__item-top">
+                <img src="img/like.svg" alt="sale 20%" class="sale-icon">
+                <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+                <div class="brend-container__item-icons">
+                    <img src="img/star-orange.png" alt="" class="product-icon">
+                    <img src="img/icons/ваги.svg" alt="" class="product-icon">
+                </div>
+            </div>
+            <div class="news-container__item-second">
+                <p class="articul">Артикул <span>01-02-00-1077</span></p>
+                <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+                <hr>
+                <p class="brand">Бренд <span>YNY</span></p>
+                <p class="presence">Есть в наличии</p>
+                <p class="price">264,00 <span>UAH</span></p>
+                <hr>
+                <div class="produc-button">
+                    <input type="number" class="product-num" min="1">
+                    <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+                   
+                </div>
+                <button class="one-click">Купить в 1 клик</button>
+            </div>
+        </div>
+    </div>
+    
+      
+    <div class="news-container1">
+        <div class="news-container__item">
+            <div class="news-container__item-top">
+                <img src="img/like.svg" alt="sale 20%" class="sale-icon">
+                <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+                <div class="brend-container__item-icons">
+                    <img src="img/star-orange.png" alt="" class="product-icon">
+                    <img src="img/icons/ваги.svg" alt="" class="product-icon">
+                </div>
+            </div>
+            <div class="news-container__item-second">
+                <p class="articul">Артикул <span>01-02-00-1077</span></p>
+                <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+                <hr>
+                <p class="brand">Бренд <span>YNY</span></p>
+                <p class="presence">Есть в наличии</p>
+                <p class="price">264,00 <span>UAH</span></p>
+                <hr>
+                <div class="produc-button">
+                    <input type="number" class="product-num" min="1">
+                    <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+                   
+                </div>
+                <button class="one-click">Купить в 1 клик</button>
+            </div>
+        </div>
+    </div>
+    
+    
+             
+    <div class="news-container1">
+        <div class="news-container__item">
+            <div class="news-container__item-top">
+                <img src="img/like.svg" alt="sale 20%" class="sale-icon">
+                <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+                <div class="brend-container__item-icons">
+                    <img src="img/star-orange.png" alt="" class="product-icon">
+                    <img src="img/icons/ваги.svg" alt="" class="product-icon">
+                </div>
+            </div>
+            <div class="news-container__item-second">
+                <p class="articul">Артикул <span>01-02-00-1077</span></p>
+                <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+                <hr>
+                <p class="brand">Бренд <span>YNY</span></p>
+                <p class="presence">Есть в наличии</p>
+                <p class="price">264,00 <span>UAH</span></p>
+                <hr>
+                <div class="produc-button">
+                    <input type="number" class="product-num" min="1">
+                    <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+                   
+                </div>
+                <button class="one-click">Купить в 1 клик</button>
+            </div>
+        </div>
+    </div>
+    
+    
+                 
+    <div class="news-container1">
+        <div class="news-container__item">
+            <div class="news-container__item-top">
+                <img src="img/like.svg" alt="sale 20%" class="sale-icon">
+                <img src="img/products/filter.png" alt="" class="brend-container-product-img">
+                <div class="brend-container__item-icons">
+                    <img src="img/star-orange.png" alt="" class="product-icon">
+                    <img src="img/icons/ваги.svg" alt="" class="product-icon">
+                </div>
+            </div>
+            <div class="news-container__item-second">
+                <p class="articul">Артикул <span>01-02-00-1077</span></p>
+                <h4 class="product-name">Фильтр топливный Mercedes Actros OM-501LA</h4>
+                <hr>
+                <p class="brand">Бренд <span>YNY</span></p>
+                <p class="presence">Есть в наличии</p>
+                <p class="price">264,00 <span>UAH</span></p>
+                <hr>
+                <div class="produc-button">
+                    <input type="number" class="product-num" min="1">
+                    <button class="add-to-card"><img src="img/icons/basket-white.svg" alt="" class="buy"></button>
+                   
+                </div>
+                <button class="one-click">Купить в 1 клик</button>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    
+     </div>
+ <!-- /popular -->
+ <div class="sponsors1">
+     <h4 class="sponsors">Бренди</h4>
+     <div class="sponsors-container">
+         <div class="sponsors-container__item"><img src="img/brands/wabco.svg" alt=""></div>
+         <div class="sponsors-container__item"><img src="img/brands/victor-rens.svg" alt=""></div>
+         <div class="sponsors-container__item"><img src="img/brands/Universal.svg" alt=""></div>
+         <div class="sponsors-container__item"><img src="img/brands/tissen.svg" alt=""></div>
+         <div class="sponsors-container__item"><img src="img/brands/timken.svg" alt=""></div>
+         <div class="sponsors-container__item"><img src="img/brands/Textar.png" alt=""></div>
+         <div class="sponsors-container__item"><img src="img/brands/tissen.svg" alt=""></div>
+
+     </div>
+ </div>
  <!-- end of brends -->
+ <!-- новини -->
+ <!-- <div class="news2-containerall">
+    <h4 class="news2-title">Новини</h4>
+    
+    <div class="news2-container">
+    
+        <div class="news2-container1">
+            <div class="news2-container__item">
+               <div class="news2-container__item-top">
+                <img src="img/product1.png" alt="">
+               </div>
+               <div class="news2-container__item-second">
+                   <p class="news2-date">29.07.2020 13:45</p>
+                   <p class="news2-text">Оновлення #4 від команди ClouB: 
+                       кабінет Менеджера, імпорт зображень, сортування</p>
+                <p class="new2-link">#Оновлення</p>
+                <p class="news2-subtitle">Оновлення від команди ClouB</p>
+                <a href="#" class="more">Детальніше</a>
+            </div>
+            </div>
+        </div>
+    
+    
+     
+        <div class="news2-container1">
+            <div class="news2-container__item">
+                <div class="news2-container__item-top">
+                    <img src="img/product2.png" alt="">
+                   </div>
+                   <div class="news2-container__item-bottom">
+                       
+                </div>
+            </div>
+        </div>
+    
+    
+     
+        <div class="news2-container1">
+            <div class="news2-container__item">
+                <div class="news2-container__item-top">
+                    <img src="img/product1.png" alt="">
+                   </div>
+                   <div class="news2-container__item-bottom">
+                       
+                </div>
+            </div>
+        </div>
+    
+    
+      
+        <div class="news2-container1">
+            <div class="news2-container__item">
+                <div class="news2-container__item-top">
+                    <img src="img/product2.png" alt="">
+                   </div>
+                   <div class="news2-container__item-bottom">
+                       
+                </div>
+            </div>
+        </div>
+    
+    
+    
+        <div class="news2-container1">
+            <div class="news2-container__item">
+                <div class="news2-container__item-top">
+                    <img src="img/product1.png" alt="">
+                   </div>
+                   <div class="news2-container__item-bottom">
+                       
+                </div>
+            </div>
+        </div>
+    
+    
+    
+                 
+        <div class="news2-container1">
+            <div class="news2-container__item">
+                <div class="news2-container__item-top">
+                    <img src="img/product2.png" alt="">
+                   </div>
+                   <div class="news2-container__item-bottom">
+                       
+                </div>
+            </div>
+        </div>
+    
+    
+    </div>
+    
+     </div> -->
+    
+ <!-- кінець новин -->
+ <div class="shop-info-container">
+     <h4 class="shop-info-title">Інтернет магазин запчастин для вантажівок </h4>
+     <p class="shop-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia in turpis eget congue. In vestibulum augue quis pharetra pulvinar. Cras semper consequat justo vel maximus. Nam lacinia eleifend nibh et rhoncus. Nunc nulla nisl, rhoncus vitae tellus quis, accumsan laoreet massa. Mauris non augue ipsum. Etiam sit amet pretium velit. Proin sodales metus eget metus semper, eu venenatis augue luctus.</p>
+
+     <p class="shop-info">Nullam a urna mauris. Ut id euismod purus. Duis vel ipsum libero.</p>
+     
+     <p class="shop-info">Maecenas iaculis nisi in rutrum cursus. Phasellus dolor nibh, imperdiet in sapien vitae, eleifend ornare neque. Sed mattis ex felis, ut sagittis est vulputate nec. Integer vel metus pharetra, placerat magna at, dictum sem. Donec non molestie tellus. Pellentesque vehicula mi at lectus volutpat, at egestas ligula commodo.</p>
+     <p class="shop-info">Nam sed semper leo, eget vulputate augue. Ut egestas, orci luctus cursus blandit, tortor magna fermentum justo, ac tempor arcu massa consequat ante. Donec sit amet ornare diam, vel interdum tellus. Pellentesque elementum tempus est sit amet rutrum. Nunc id enim fermentum, condimentum eros ac, finibus nulla. Vivamus mauris mi, posuere in semper a, tristique porttitor nibh. Donec convallis eleifend sollicitudin. Suspendisse ipsum enim, vehicula ut arcu ac, lacinia accumsan elit. Ut lorem lacus, feugiat vitae urna ac, tristique laoreet massa.</p>
+
+
+
+
+
+
+ </div>
 
 <script src="js/jquery/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
+<script src="libs/slick/slick.min.js"></script>
  <script src="js/main.js"></script>
+
 </body>
 </html>
