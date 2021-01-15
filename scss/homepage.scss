@@ -1034,6 +1034,14 @@ input[type="number"]::-webkit-inner-spin-button {
   display: none;
   border-top: 30px solid rgba(0, 0, 0, 0.35);
   border-left: 30px solid rgba(0, 0, 0, 0.35);
+  &:before{
+    position: absolute;
+    content: ' ';
+    top: 0;
+    bottom: 0;
+    left: -100px;
+    width: 100px;
+  }
 }
 .sidepopup-container {
   display: flex;
@@ -1663,4 +1671,15 @@ input[type="number"]::-webkit-inner-spin-button {
   .shop-info {
     padding: 0 0px;
   }
+
+  .mainslider .slick-track {
+    height: 300px;
+
+  }
+  
+  .catalog-navblock-side-menu{
+  height: 300px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+  }
 }
+
