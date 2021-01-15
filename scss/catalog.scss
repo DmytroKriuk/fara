@@ -286,14 +286,14 @@ padding: 5px;
   width: 284px;
     background: #fff;
     margin-left: -13px;
-    margin-top: 25px;
+    // margin-top: 25px;
     padding-left: 30px;
     padding-right: 20px;
     padding-top: 20px;
   transform: translateX(-220px);
   transition: all .4s ease-out;
   position: fixed;
-  top: 120px;
+  top: 100px;
   left: 0;
   z-index: 200;
   bottom: 0;
@@ -447,3 +447,92 @@ display: flex;
       position: relative;
       z-index: 0;
     }
+
+    .oldHeader{
+      position: fixed;
+      height: 100px;
+      width: 100%;
+      background: #FFFFFF;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+z-index: 220;
+top: 0;
+    }
+
+    .breadcams{
+      margin-left: -7px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      p, a{
+        font-family: 'Roboto';
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 14px;
+color: #000000;
+margin-left: 7px;
+margin-right: 7px;
+transition: all .3s ease-out;
+text-decoration: none;
+      }
+      p{
+        color: #828282;
+      }
+      img{
+        width: 5px;
+      }
+    }
+
+    .supheader__container{
+      padding-left: 60px;
+    }
+
+
+    .supheader {
+
+      &__btn-cont {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+
+      .btn-1 {
+        max-width: 277px;
+        width: 100%;
+height: 44px;
+background: #F07D00;
+border-radius: 4px;
+font-family: Roboto;
+font-size: 18px;
+line-height: 18px;
+text-align: center;
+color: #FFFFFF;
+display: flex;
+justify-content: center;
+align-items: center;
+border: none;
+margin-right: 35px;
+margin-top: 20px;
+      }
+      .btn-2 {
+        margin-top: 20px;
+        background: #E5E5E5;
+        border: 1px solid #F07D00;
+box-sizing: border-box;
+border-radius: 4px;
+font-family: Roboto;
+font-size: 12px;
+line-height: 100%;
+color: #4F4F4F;
+display: flex;
+justify-content: center;
+align-items: center;
+max-width: 202px;
+width: 100%;
+height: 44px;
+      }
+    }
+  
+  }
+

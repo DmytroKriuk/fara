@@ -2,6 +2,8 @@
 
 
  
+
+ 
  var catalogSideMenu = document.querySelector('.catalog-navblock-side-menu')
  var openSidmenuCatalog = document.querySelector('.open-sidmenu-catalog')
  var closeSdpopup = document.querySelector('.close-dfpopup')
@@ -251,6 +253,10 @@ for(let i of comparisonBtn){
   })
 }
 
+if(document.querySelector('.catalogJS')){
+
+
+
 var buyBtn  = document.querySelectorAll('.buy-modal-btn ')
 for(let i of buyBtn ){
   i.addEventListener('click', () =>{
@@ -271,6 +277,9 @@ i.nextElementSibling.style.display = 'block'
 
 var filterBar  = document.querySelector('.filter__container')
 var mainContent  = document.querySelector('.container-content')
+
+
+
 if(filterBar.classList.contains('active')){
   mainContent.classList.add('filter__container-open')
 }
@@ -279,8 +288,15 @@ if(filterBar.classList.contains('active')){
 var filterIcon  = document.querySelector('.filter__close-icon')
 var closeFilterContainer  = document.querySelector('.close-filter-container')
 
-closeFilterContainer.addEventListener('click', () => {
+if (window.matchMedia("(max-width: 600px)").matches) {
+  filterBar.classList.remove('active')
+  mainContent.classList.remove('active')
+  filterIcon.classList.add('active')
+  closeFilterContainer.classList.add('active')
+} 
 
+
+closeFilterContainer.addEventListener('click', () => {
   filterBar.classList.toggle('active')
   if(filterBar.classList.contains('active')){
     mainContent.classList.add('filter__container-open')
@@ -292,6 +308,7 @@ closeFilterContainer.addEventListener('click', () => {
     closeFilterContainer.classList.add('active')
   }
 })
+
 
 
 // dropdown-filter
@@ -436,3 +453,4 @@ sliders.forEach( function(slider) {
 });
 
 
+}

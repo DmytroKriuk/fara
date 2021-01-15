@@ -291,7 +291,7 @@ body {
 .wrap {
     min-height: 100%;
     height: auto;
-    padding: 145px 0 0 0;
+    padding: 121px 0 0 0;
     background-color: var(--background-wrap-color);
 }
 
@@ -932,7 +932,7 @@ a.desc:after {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     position: fixed;
     right: 0;
-    top: 130px;
+    top: 100px;
     height: calc(100vh - 100px);
     float: right;
     z-index: 5;
