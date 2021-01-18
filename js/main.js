@@ -27,21 +27,40 @@ var bgSdepopup = document.querySelector('.bg-for-sdepopup')
 
 for( let i = 0 ;  i < catalogItem.length ; i++ ){
   catalogItem[i].addEventListener('mouseenter', () => {
+    for( let i = 0 ;  i < catalogItem.length ; i++ ){
+      sidepopupJS[i].style.display = 'none'
+    }
     sidepopupJS[i].style.display = 'block'
     bgSdepopup.classList.add('active')
+    catalogItem[i].classList.add('enterMouseItem')
   })
+
   catalogItem[i].addEventListener('mouseleave', () => {
-    sidepopupJS[i].style.display = 'none'
-    bgSdepopup.classList.remove('active')
+        catalogItem[i].classList.remove('enterMouseItem')
+        setTimeout(() =>{
+          if( !catalogItem[i].classList.contains('enterMouseItem')){
+            if(!sidepopupJS[i].classList.contains('enterMouse')){
+            sidepopupJS[i].style.display = 'none'
+            bgSdepopup.classList.remove('active')
+          }
+          }
+        }, 400)
   })
   sidepopupJS[i].addEventListener('mouseenter', () => {
     sidepopupJS[i].style.display = 'block'
     bgSdepopup.style.display = 'block'
     bgSdepopup.classList.add('active')
+    sidepopupJS[i].classList.add('enterMouse')
   })
   sidepopupJS[i].addEventListener('mouseleave', () => {
-    sidepopupJS[i].style.display = 'none'
-    bgSdepopup.classList.remove('active')
+    sidepopupJS[i].classList.remove('enterMouse')
+    setTimeout(() =>{
+      if( !sidepopupJS[i].classList.contains('enterMouse')){
+      sidepopupJS[i].style.display = 'none'
+      bgSdepopup.classList.remove('active')
+      }
+    }, 400)
+   
   })
 }
 
@@ -83,11 +102,13 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
   // акційні товари
  $('.brend-container').slick({
   slidesToShow: 4,
+     autoplay: false,
+  autoplaySpeed: 10000,
   dots: true,
+  centerMode: true,
   responsive: [{
     breakpoint: 1510,
     settings: {
-        //  centerMode: true,
         slidesToShow: 3
     }
 },
@@ -102,14 +123,23 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
   settings: {
       slidesToShow: 1
   }
+},
+{
+  breakpoint: 490,
+  settings: {
+    slidesToShow: 1,
+    centerMode: false,
+  }
 }
-
 ]
 
  });
  $('.news-container').slick({
   slidesToShow: 4,
   dots: true,
+  centerMode: true,
+     autoplay: false,
+  autoplaySpeed: 10000,
   responsive: [{
     breakpoint: 1510,
     settings: {
@@ -127,18 +157,26 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
   settings: {
       slidesToShow: 1
   }
+},
+{
+  breakpoint: 490,
+  settings: {
+    slidesToShow: 1,
+    centerMode: false,
+  }
 }
-
 ]
 
  });
  $('.popular-container').slick({
   slidesToShow: 4,
   dots: true,
+     autoplay: false,
+  autoplaySpeed: 10000,
+  centerMode: true,
   responsive: [{
     breakpoint: 1510,
     settings: {
-         // centerMode: true,
         slidesToShow: 3
     }
 },
@@ -154,6 +192,13 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
   settings: {
       slidesToShow: 1
   }
+},
+{
+  breakpoint: 490,
+  settings: {
+    slidesToShow: 1,
+    centerMode: false,
+  }
 }
 ]
 
@@ -162,10 +207,13 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
  $('.news2-container').slick({
   slidesToShow: 4,
   dots: true,
+     autoplay: false,
+     centerMode: true,
+
+  autoplaySpeed: 10000,
   responsive: [{
     breakpoint: 1510,
     settings: {
-         // centerMode: true,
         slidesToShow: 3
     }
 },
@@ -180,6 +228,13 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
   settings: {
       slidesToShow: 1
   }
+},
+{
+  breakpoint: 490,
+  settings: {
+    slidesToShow: 1,
+    centerMode: false,
+  }
 }
 
 ]
@@ -189,10 +244,11 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
  $('.sponsors-container').slick({
   slidesToShow: 6,
   infinite: true,
+     autoplay: false,
+  autoplaySpeed: 10000,
   responsive: [{
     breakpoint: 1409,
     settings: {
-         // centerMode: true,
         slidesToShow: 5
     }
 },
@@ -214,14 +270,12 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
 {
   breakpoint: 663,
   settings: {
-     // centerMode: true,
       slidesToShow: 2
   }
 },
 {
   breakpoint: 524,
   settings: {
-     // centerMode: true,
       slidesToShow: 1
   }
 }
