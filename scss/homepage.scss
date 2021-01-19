@@ -1682,8 +1682,8 @@ input[type=number]::-webkit-outer-spin-button {
   @media (max-width: 1400px) {
   .brend-container__item, .news-container__item, .news2-container__item, .popular-container__item, .brend-container__item-top  {
 
-    .news-container__item-top{
-      margin-top: 15px;
+    .news-container__item-top, .brend-container__item-top, .news2-container__item-top{
+      margin-top: 5px;
     }
     .brend-container-product-img{
   width: 130px;
