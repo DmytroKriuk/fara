@@ -1,9 +1,8 @@
+
+
+
  if(document.querySelector('.index')){
 
-
- 
-
- 
  var catalogSideMenu = document.querySelector('.catalog-navblock-side-menu')
  var openSidmenuCatalog = document.querySelector('.open-sidmenu-catalog')
  var closeSdpopup = document.querySelector('.close-dfpopup')
@@ -72,9 +71,11 @@ var minusButton = document.querySelectorAll('.minus-button')
 
 for( let i = 0 ;  i < productNum.length ; i++ ){
   plusButton[i].addEventListener('click', () => {
+    console.log('+');
     productNum[i].value++
   })
   minusButton[i].addEventListener('click', () => {
+    console.log('-');
     if(productNum[i].value == 0){
       return
     }
@@ -82,16 +83,13 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
   })
 }
 }
+
+
+
+
 // onclick change arrow in header
 
-    $('.header-top-second-btn').click(function(){
-      var src = $(".header-top-second-btn img").attr('src');
-  
-      if(src=="img/icons/arr-down.svg")
-        $(".header-top-second-btn img").attr('src',"img/icons/arr-up.svg");
-      else
-        $(".header-top-second-btn img").attr('src',"img/icons/arr-down.svg");
-    });
+
 
   // 
   function DropDown() {
@@ -102,8 +100,8 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
   // акційні товари
  $('.brend-container').slick({
   slidesToShow: 4,
-     autoplay: false,
-  autoplaySpeed: 10000,
+     autoplay: true,
+  autoplaySpeed: 1000,
   dots: true,
   centerMode: true,
   responsive: [{
@@ -138,8 +136,8 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
   slidesToShow: 4,
   dots: true,
   centerMode: true,
-     autoplay: false,
-  autoplaySpeed: 10000,
+     autoplay: true,
+  autoplaySpeed: 1000,
   responsive: [{
     breakpoint: 1510,
     settings: {
@@ -171,8 +169,8 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
  $('.popular-container').slick({
   slidesToShow: 4,
   dots: true,
-     autoplay: false,
-  autoplaySpeed: 10000,
+     autoplay: true,
+  autoplaySpeed: 1000,
   centerMode: true,
   responsive: [{
     breakpoint: 1510,
@@ -203,14 +201,11 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
 ]
 
  });
-
  $('.news2-container').slick({
   slidesToShow: 4,
   dots: true,
-     autoplay: false,
      centerMode: true,
 
-  autoplaySpeed: 10000,
   responsive: [{
     breakpoint: 1510,
     settings: {
@@ -240,12 +235,11 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
 ]
 
  });
-
  $('.sponsors-container').slick({
   slidesToShow: 6,
   infinite: true,
-     autoplay: false,
-  autoplaySpeed: 10000,
+     autoplay: true,
+  autoplaySpeed: 1000,
   responsive: [{
     breakpoint: 1409,
     settings: {
@@ -307,9 +301,8 @@ for(let i of comparisonBtn){
   })
 }
 
+
 if(document.querySelector('.catalogJS')){
-
-
 
 var buyBtn  = document.querySelectorAll('.buy-modal-btn ')
 for(let i of buyBtn ){
@@ -391,120 +384,165 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-//range
-
-var thumbsize = 14;
-
-function draw(slider,splitvalue) {
-
-    /* set function vars */
-    var min = slider.querySelector('.min');
-    var max = slider.querySelector('.max');
-    var lower = slider.querySelector('.lower');
-    var upper = slider.querySelector('.upper');
-    var legend = slider.querySelector('.legend');
-    var thumbsize = parseInt(slider.getAttribute('data-thumbsize'));
-    var rangewidth = parseInt(slider.getAttribute('data-rangewidth'));
-    var rangemin = parseInt(slider.getAttribute('data-rangemin'));
-    var rangemax = parseInt(slider.getAttribute('data-rangemax'));
-
-    /* set min and max attributes */
-    min.setAttribute('max',splitvalue);
-    max.setAttribute('min',splitvalue);
-
-    /* set css */
-    min.style.width = parseInt(thumbsize + ((splitvalue - rangemin)/(rangemax - rangemin))*(rangewidth - (2*thumbsize)))+'px';
-    max.style.width = parseInt(thumbsize + ((rangemax - splitvalue)/(rangemax - rangemin))*(rangewidth - (2*thumbsize)))+'px';
-    min.style.left = '0px';
-    max.style.left = parseInt(min.style.width)+'px';
-    min.style.top = lower.offsetHeight+'px';
-    max.style.top = lower.offsetHeight+'px';
-    legend.style.marginTop = min.offsetHeight+'px';
-    slider.style.height = (lower.offsetHeight + min.offsetHeight + legend.offsetHeight)+'px';
-    
-    /* correct for 1 off at the end */
-    if(max.value>(rangemax - 1)) max.setAttribute('data-value',rangemax);
-
-    /* write value and labels */
-    max.value = max.getAttribute('data-value'); 
-    min.value = min.getAttribute('data-value');
-    lower.innerHTML = min.getAttribute('data-value');
-    upper.innerHTML = max.getAttribute('data-value');
-
 }
 
-function init(slider) {
-    /* set function vars */
-    var min = slider.querySelector('.min');
-    var max = slider.querySelector('.max');
-    var rangemin = parseInt(min.getAttribute('min'));
-    var rangemax = parseInt(max.getAttribute('max'));
-    var avgvalue = (rangemin + rangemax)/2;
-    var legendnum = slider.getAttribute('data-legendnum');
 
-    /* set data-values */
-    min.setAttribute('data-value',rangemin);
-    max.setAttribute('data-value',rangemax);
-    
-    /* set data vars */
-    slider.setAttribute('data-rangemin',rangemin); 
-    slider.setAttribute('data-rangemax',rangemax); 
-    slider.setAttribute('data-thumbsize',thumbsize); 
-    slider.setAttribute('data-rangewidth',slider.offsetWidth);
+$(document).on('click', '.dropdown-toggle-category', function () {
 
-    /* write labels */
-    var lower = document.createElement('span');
-    var upper = document.createElement('span');
-    lower.classList.add('lower','value');
-    upper.classList.add('upper','value');
-    lower.appendChild(document.createTextNode(rangemin));
-    upper.appendChild(document.createTextNode(rangemax));
-    slider.insertBefore(lower,min.previousElementSibling);
-    slider.insertBefore(upper,min.previousElementSibling);
-    
-    /* write legend */
-    var legend = document.createElement('div');
-    legend.classList.add('legend');
-    var legendvalues = [];
-    for (var i = 0; i < legendnum; i++) {
-        legendvalues[i] = document.createElement('div');
-        var val = Math.round(rangemin+(i/(legendnum-1))*(rangemax - rangemin));
-        legendvalues[i].appendChild(document.createTextNode(val));
-        legend.appendChild(legendvalues[i]);
+  if ($(document).find('.dropdown-menu.dropdown-category').hasClass('show')) {
+      $(document).find('.dropdown-menu.dropdown-category').removeClass('show');
+  } else {
+      $(document).find('.dropdown-menu.dropdown-category').addClass('show');
+  }
+});
 
-    } 
-    slider.appendChild(legend);
+$(document).on('click', event => {
+  let object = $(event.target);
+  if (!object.hasClass('dropdown-toggle-category')) {
 
-    /* draw */
-    draw(slider,avgvalue);
+      if (object.closest('.dropdown-category').length === 0) {
+          $(document).find('.dropdown-menu.dropdown-category').removeClass('show');
+      }
+  }
+  if (object.closest('.header-main').length === 0 && object.closest('.product-view').length === 0) {
 
-    /* events */
-    min.addEventListener("input", function() {update(min);});
-    max.addEventListener("input", function() {update(max);});
-}
+      $(document).find('#page-content').css({pointerEvents: 'all'});
+      $(document).find('#search-block').css({display: 'none'});
+      $(document).find('#filter-fog').css({display: 'none'});
 
-function update(el){
-    /* set function vars */
-    var slider = el.parentElement;
-    var min = slider.querySelector('#min');
-    var max = slider.querySelector('#max');
-    var minvalue = Math.floor(min.value);
-    var maxvalue = Math.floor(max.value);
-    
-    /* set inactive values before draw */
-    min.setAttribute('data-value',minvalue);
-    max.setAttribute('data-value',maxvalue);
+  }
+  return true;
+});
 
-    var avgvalue = (minvalue + maxvalue)/2;
+$(document).on('click', '.catalog-product-category .expand-btn', function () {
+  if ($(this).closest('li').children('.collapsed').is(':visible')) {
+      $(this).find('.collapse-icon').css({display: 'none'});
+      $(this).find('.expand-icon').css({display: 'block'});
+      $(this).closest('.category-input-group').removeClass('active');
+  } else {
+      $(this).find('.collapse-icon').css({display: 'block'});
+      $(this).find('.expand-icon').css({display: 'none'});
+      $(this).closest('.category-input-group').addClass('active');
+  }
+  $(this).closest('li').children('.collapsed').slideToggle('fast');
 
-    /* draw */
-    draw(slider,avgvalue);
-}
+  let main = $(this).closest('.main');
+  $(document).find('.catalog-product-category .main:not([data-code="' + main.attr('data-code') + '"])').each(function () {
+      $(this).find('.collapse-icon').css({display: 'none'});
+      $(this).find('.expand-icon').css({display: 'block'})
+      $(this).find('.category-input-group').removeClass('active');
+  });
+  $(document).find('.catalog-product-category .main:not([data-code="' + main.attr('data-code') + '"]) .collapsed').each(function () {
+      if ($(this).is(':visible')) {
+          $(this).slideToggle('slow')
+      }
+      $(this).find('.collapse-icon').css({display: 'none'});
+      $(this).find('.expand-icon').css({display: 'block'})
+  })
+});
 
-var sliders = document.querySelectorAll('.min-max-slider');
-sliders.forEach( function(slider) {
-    init(slider);
+$(document).on('click', '.catalog-product-category .checkbox-custom', function (e) {
+
+  if ($(e.target).hasClass('checkbox-custom') && $(this).closest('.category-input-group').length > 0) {
+      e.preventDefault();
+      $(this).closest('.category-input-group').find('.expand-btn').trigger('click');
+  }
 });
 
 
-}
+$(document).on('change', '.catalog-product-category .checkbox-custom input', function () {
+  updateCategoryBackground()
+  updateCatalogByFilters();
+});
+$(document).on('click', '#filter-form .submit-filter', function () {
+  updateCatalogByFilters();
+});
+
+
+
+
+
+
+
+var stepsSlider = document.getElementById('steps-slider');
+var input0 = document.getElementById('input-with-keypress-0');
+var input1 = document.getElementById('input-with-keypress-1');
+var inputs = [input0, input1];
+
+noUiSlider.create(stepsSlider, {
+    start: [20, 2790],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 3000
+    }
+});
+
+
+stepsSlider.noUiSlider.on('update', function (values, handle) {
+    inputs[handle].value = Math.floor(values[handle]);
+});
+
+// Listen to keydown events on the input field.
+inputs.forEach(function (input, handle) {
+
+  input.addEventListener('change', function () {
+      stepsSlider.noUiSlider.setHandle(handle, this.value);
+  });
+
+  input.addEventListener('keydown', function (e) {
+
+      var values = stepsSlider.noUiSlider.get();
+      var value = Number(values[handle]);
+
+      // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
+      var steps = stepsSlider.noUiSlider.steps();
+
+      // [down, up]
+      var step = steps[handle];
+
+      var position;
+
+
+      switch (e.which) {
+
+          case 13:
+              stepsSlider.noUiSlider.setHandle(handle, this.value);
+              break;
+
+          case 38:
+
+              // Get step to go increase slider value (up)
+              position = step[1];
+
+              // false = no step is set
+              if (position === false) {
+                  position = 1;
+              }
+
+              // null = edge of slider
+              if (position !== null) {
+                  stepsSlider.noUiSlider.setHandle(handle, value + position);
+              }
+
+              break;
+
+          case 40:
+
+              position = step[0];
+
+              if (position === false) {
+                  position = 1;
+              }
+
+              if (position !== null) {
+                  stepsSlider.noUiSlider.setHandle(handle, value - position);
+              }
+
+              break;
+      }
+  });
+});
+
+
+// input1
