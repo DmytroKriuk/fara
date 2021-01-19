@@ -769,6 +769,10 @@ body {
 
   margin: 20px;
   padding: 10px 0;
+
+
+  
+
 }
 
 
@@ -1675,5 +1679,38 @@ input[type=number]::-webkit-outer-spin-button {
    }
   }
  
+  @media (max-width: 1400px) {
+  .brend-container__item, .news-container__item, .news2-container__item, .popular-container__item, .brend-container__item-top  {
 
+    .news-container__item-top{
+      margin-top: 15px;
+    }
+    .brend-container-product-img{
+  width: 130px;
+  height: 130px;
+    }
+  .product-name{
+  font-size: 15px;
+  margin: 0 auto;
+    }
   
+    .brand{
+      margin-top: -7px;
+      margin-bottom: -10px;
+    }
+    .presence{
+      font-size: 15px;
+    }
+  
+    .price{
+      font-size: 25px;
+      margin-top: -6px;
+      margin-bottom: 0px;
+    }
+  .one-click{
+    margin-bottom: 0px !important;
+  }
+  
+  }
+
+}
