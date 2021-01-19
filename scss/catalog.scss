@@ -408,60 +408,20 @@ img{
     width: 50px;
     transform: translateX(18px)  ;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
-    // .filter__btn-txt{
-    //   position: static;
-    //   opacity: 1;
-    // }
-  
   }
-  // .close-filter-container.active{
-  //   width: 90px;
-  //   transform: translateX(37px) translateY(27px) rotate(90deg);
-  //   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
-  //   .filter__btn-txt{
-  //     position: static;
-  //     opacity: 1;
-  //   }
-  //   img{
-  //     display: none;
-  //   }
-  // }
 
 .news2-containerall-catalog{
 display: flex;
 }
-// .filter__btn-txt{
-//   transition: all .5s ease-out;
-//   position: absolute;
-//   opacity: 0;
-// }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  @media (max-width: 1420px){
+  @media (max-width: 1340px){
     #product-tile .tile-col  {
     flex: 0 0 33.33%;
     max-width: 33.33%;
   width: 33.33% ;
   }}
   
-  
-  
-  @media (max-width: 900px){
+  @media (max-width: 800px){
     .button__item{
       width: calc(50% - 10px);
     }
@@ -685,4 +645,71 @@ height: 44px;
     margin-top: 15px;
   }
 
+}
+
+.dropdown-toggle-category-sidemenu{
+  .catalog-sidemenu-content-item{
+  padding-left: 13px !important;
+  padding-right: 13px !important;
+}
+}
+
+.sidepopup-catalog{
+.sidepopup{
+  left: 590px;
+  width: 950px;
+
+.sidepopup-container-item-img{
+  width: 80px;
+  height: 130px;
+}
+.sidepopup-container-item{
+  width: 200px;
+  height: 220px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+}
+}
+
+@media (max-width: 1560px){
+  .sidepopup-catalog{
+    .sidepopup{
+      width: 720px;
+    }
+    }
+}
+
+@media (max-width: 1305px){
+  .sidepopup-catalog{
+    .sidepopup{
+     width: 98%;
+     left: 1%;
+    }
+
+    .sidepopup-container-item{
+      width: 200px;
+      height: 220px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .sidepopup-container-item {
+      width: 180px;
+      height: 230px;
+    }
+  
+    }
+}
+@media (max-width: 435px){
+.dropdown-toggle-category-sidemenu{
+ .dropdown-category{
+   width: 220px !important;
+ } 
+}
+}
+
+.title-is{
+  width: max-content !important;
 }

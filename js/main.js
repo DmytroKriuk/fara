@@ -8,7 +8,6 @@
  var closeSdpopup = document.querySelector('.close-dfpopup')
 
  closeSdpopup.addEventListener('click', () => {
-   console.log('asdasd');
   sidepopupJS[i].style.display = 'none'
   bgSdepopup.classList.remove('active')
  })
@@ -105,13 +104,13 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
   dots: true,
   centerMode: true,
   responsive: [{
-    breakpoint: 1510,
+    breakpoint: 1340,
     settings: {
         slidesToShow: 3
     }
 },
 {
-  breakpoint: 1232,
+  breakpoint:  1092,
   settings: {
       slidesToShow: 2
   }
@@ -139,13 +138,13 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
      autoplay: true,
   autoplaySpeed: 1000,
   responsive: [{
-    breakpoint: 1510,
+    breakpoint: 1340,
     settings: {
         slidesToShow: 3
     }
 },
 {
-  breakpoint: 1232,
+  breakpoint:  1092,
   settings: {
       slidesToShow: 2
   }
@@ -173,13 +172,13 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
   autoplaySpeed: 1000,
   centerMode: true,
   responsive: [{
-    breakpoint: 1510,
+    breakpoint: 1340,
     settings: {
         slidesToShow: 3
     }
 },
 {
-  breakpoint: 1232,
+  breakpoint: 1092,
   settings: {
       slidesToShow: 2
   }
@@ -207,13 +206,13 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
      centerMode: true,
 
   responsive: [{
-    breakpoint: 1510,
+    breakpoint: 1340,
     settings: {
         slidesToShow: 3
     }
 },
 {
-  breakpoint: 1232,
+  breakpoint:  1092,
   settings: {
       slidesToShow: 2
   }
@@ -303,6 +302,55 @@ for(let i of comparisonBtn){
 
 
 if(document.querySelector('.catalogJS')){
+
+
+  var catalogItem = document.querySelectorAll('.catalog-sidemenu-content-item')
+  var sidepopupJS = document.querySelectorAll('.sidepopup')
+  var bgSdepopup = document.querySelector('.bg-for-sdepopup')
+  
+  
+  for( let i = 0 ;  i < catalogItem.length ; i++ ){
+    catalogItem[i].addEventListener('mouseenter', () => {
+      for( let i = 0 ;  i < catalogItem.length ; i++ ){
+        sidepopupJS[i].style.display = 'none'
+      }
+      sidepopupJS[i].style.display = 'block'
+      bgSdepopup.classList.add('active')
+      catalogItem[i].classList.add('enterMouseItem')
+    })
+  
+    catalogItem[i].addEventListener('mouseleave', () => {
+          catalogItem[i].classList.remove('enterMouseItem')
+          setTimeout(() =>{
+            if( !catalogItem[i].classList.contains('enterMouseItem')){
+              if(!sidepopupJS[i].classList.contains('enterMouse')){
+              sidepopupJS[i].style.display = 'none'
+              bgSdepopup.classList.remove('active')
+            }
+            }
+          }, 400)
+    })
+    sidepopupJS[i].addEventListener('mouseenter', () => {
+      sidepopupJS[i].style.display = 'block'
+      bgSdepopup.style.display = 'block'
+      bgSdepopup.classList.add('active')
+      sidepopupJS[i].classList.add('enterMouse')
+    })
+    sidepopupJS[i].addEventListener('mouseleave', () => {
+      sidepopupJS[i].classList.remove('enterMouse')
+      setTimeout(() =>{
+        if( !sidepopupJS[i].classList.contains('enterMouse')){
+        sidepopupJS[i].style.display = 'none'
+        bgSdepopup.classList.remove('active')
+        }
+      }, 400)
+     
+    })
+  }
+
+
+
+
 
 var buyBtn  = document.querySelectorAll('.buy-modal-btn ')
 for(let i of buyBtn ){
