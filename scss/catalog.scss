@@ -712,4 +712,19 @@ height: 44px;
 
 .title-is{
   width: max-content !important;
+  color: green !important;
+}
+.title-no{
+  width: max-content !important;
+  color: #F07D00 !important;
+}
+.catalogJS{
+.news2-containerall{
+  margin-left: -20px;
+  width: calc(100% + 20px);
+  @media (max-width: 1160px){
+    margin-left: 0px;
+    width: 100%;
+  }
+}
 }

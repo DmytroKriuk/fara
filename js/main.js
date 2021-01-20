@@ -200,6 +200,10 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
 ]
 
  });
+
+ if(document.querySelector('.index')){
+
+
  $('.news2-container').slick({
   slidesToShow: 4,
   dots: true,
@@ -234,6 +238,55 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
 ]
 
  });
+
+
+ }
+
+
+ if(document.querySelector('.catalogJS')){
+
+
+  $('.news2-container').slick({
+   slidesToShow: 4,
+   dots: true,
+      centerMode: true,
+ 
+   responsive: [{
+     breakpoint: 1510,
+     settings: {
+         slidesToShow: 3
+     }
+ },
+ {
+   breakpoint:  1252,
+   settings: {
+       slidesToShow: 2
+   }
+ },
+ {
+   breakpoint: 670,
+   settings: {
+       slidesToShow: 1
+   }
+ },
+ {
+   breakpoint: 490,
+   settings: {
+     slidesToShow: 1,
+     centerMode: false,
+   }
+ }
+ 
+ ]
+ 
+  });
+ 
+ 
+  }
+ 
+ 
+
+
  $('.sponsors-container').slick({
   slidesToShow: 6,
   infinite: true,
