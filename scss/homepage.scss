@@ -786,6 +786,11 @@ body {
     margin: 0 !important;
    
   }
+
+  .brend-container__item-icons{
+    margin-top: -20px !important;
+  }
+
 }
 .news2-container__item-top{
 img{
@@ -941,7 +946,7 @@ img{
 }
 .produc-button {
   // width: 241px;
-  max-width: 300px;
+  max-width: 251px;
   width: 100%;
   // width: 100% !important; 
   display: flex;
@@ -1714,3 +1719,19 @@ input[type=number]::-webkit-outer-spin-button {
   }
 
 }
+
+ 
+
+  .slick-list.draggable{
+padding-right: 100px  !important;
+padding-left: 0 !important;
+  }
+
+
+  @media (max-width: 996px) {
+    .slick-list.draggable{
+      padding-right: 0px  !important;
+      padding-left: 0 !important;
+        }
+
+  }

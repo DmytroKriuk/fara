@@ -720,11 +720,11 @@ height: 44px;
 }
 .catalogJS{
 .news2-containerall{
-  margin-left: -20px;
-  width: calc(100% + 20px);
+  margin-left: 10px;
+  // width: calc(100% + 20px);
   @media (max-width: 1160px){
     margin-left: 0px;
-    width: 100%;
+    // width: 100%;
   }
 }
 }
