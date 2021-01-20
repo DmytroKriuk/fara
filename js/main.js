@@ -99,7 +99,7 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
   // акційні товари
  $('.brend-container').slick({
   slidesToShow: 4,
-      autoplay: false,
+       autoplay: true,
   autoplaySpeed: 1000,
   dots: true,
   centerMode: true,
@@ -135,7 +135,7 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
   slidesToShow: 4,
   dots: true,
   centerMode: true,
-      autoplay: false,
+       autoplay: true,
   autoplaySpeed: 1000,
   responsive: [{
     breakpoint: 1340,
@@ -168,7 +168,7 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
  $('.popular-container').slick({
   slidesToShow: 4,
   dots: true,
-      autoplay: false,
+       autoplay: true,
   autoplaySpeed: 1000,
   centerMode: true,
   responsive: [{
@@ -197,7 +197,7 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
     centerMode: false,
   }
 }
-]
+] 
 
  });
 
@@ -290,7 +290,7 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
  $('.sponsors-container').slick({
   slidesToShow: 6,
   infinite: true,
-      autoplay: false,
+       autoplay: true,
   autoplaySpeed: 1000,
   responsive: [{
     breakpoint: 1409,
