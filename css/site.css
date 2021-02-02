@@ -4122,3 +4122,32 @@ a:hover{
     background-color: var(--primary-color);
     border-color: var(--primary-color);
 }
+
+
+.card-content__title {
+    font-size: 1.3rem;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.buy-widget {
+    display: flex;
+}
+
+.price-item {
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 20px;
+    padding-top: 15px;
+}
+
+.card-content__article {
+    margin-top: 30px;
+}
+
+.article-item__brand_title {
+    margin-top: 10px;
+}
+
+.article-item__brand_subtitle {
+    margin-top: 10px;
+}
