@@ -1,0 +1,89 @@
+
+.card-content__title {
+    font-size: 1.3rem;
+    padding: 15px 0px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.buy-widget {
+    display: flex;
+}
+
+.price-item {
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 20px;
+    padding-top: 15px;
+}
+
+.card-content__article {
+    margin-top: 30px;
+}
+
+.article-item__brand_title {
+    margin-top: 10px;
+}
+
+.article-item__brand_subtitle {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.card-block__bradcams {
+    padding-bottom: 50px;
+}
+
+.favorite-card {
+    margin: 0px 10px;
+}
+
+.comparison-card {
+    margin-right: 10px;
+}
+
+.article-row {
+    margin-top: 20px;
+}
+
+.price-item__price, .article-item__title, .stock-row-title, .article-item__brand_title {
+    color:#828282;
+}
+
+.article-item__subtitle, .article-item__brand_subtitle {
+    font-weight: 700;
+}
+
+.stock-row-subtitle {
+    color: rgb(13, 179, 13)
+}
+
+.price-string {
+    padding-right: 5px;
+}
+
+.produc-button {
+    width: auto;
+}
+
+.plus-button, .minus-button {
+    height: 15px;
+    font-size: 14px;
+    z-index: 0;
+}
+
+.product-num {
+    height: 33px;
+    width: 100%;
+}
+
+.add-to-card {
+    height: 33px;
+    width: 90px;
+}
+
+.add-to-card img {
+    width: 15px;
+}
+
+.nav-link {
+    color: #007bff;
+}
