@@ -33,12 +33,16 @@
 }
 
 .favorite-card {
-    margin: 0px 10px;
+    margin: 0;
 }
 
 .comparison-card {
-    margin-right: 10px;
+    margin: 0px 9px;
 }
+
+@media (max-width:998px) {
+    .comparison-card {margin: 0px 11px;} 
+ }
 
 .article-row {
     margin-top: 20px;
@@ -78,6 +82,12 @@
 .add-to-card {
     height: 33px;
     width: 90px;
+    
+}
+
+@media (max-width:1200px) {
+   .add-to-card {width: 43px;} 
+   .comparison-btn {width: 46px !important}
 }
 
 .add-to-card img {
@@ -86,4 +96,12 @@
 
 .nav-link {
     color: #007bff;
+}
+
+.favorite-card {
+    width: 50px;
+}
+
+.comparison-card {
+    width: 50px;
 }
