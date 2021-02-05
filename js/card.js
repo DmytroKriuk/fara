@@ -17,3 +17,19 @@ for( let i = 0 ;  i < productNum.length ; i++ ){
   })
 }
 
+
+var favoriteBtn = document.querySelectorAll('.favorite-btn')
+for(let i of favoriteBtn){
+  i.addEventListener('click', () =>{
+    i.classList.toggle('active')
+  })
+}
+
+var addCartBtn = document.querySelectorAll('.add-to-card')
+for(let i of addCartBtn){
+  i.addEventListener('click', (e) =>{
+    e.preventDefault();
+    i.classList.toggle('active')
+  })
+}
+

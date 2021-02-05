@@ -32,18 +32,6 @@
     padding-bottom: 50px;
 }
 
-.favorite-card {
-    margin: 0;
-}
-
-.comparison-card {
-    margin: 0px 9px;
-}
-
-@media (max-width:998px) {
-    .comparison-card {margin: 0px 11px;} 
- }
-
 .article-row {
     margin-top: 20px;
 }
@@ -69,30 +57,9 @@
 }
 
 .plus-button, .minus-button {
-    height: 15px;
-    font-size: 14px;
     z-index: 0;
 }
 
-.product-num {
-    height: 33px;
-    width: 100%;
-}
-
-.add-to-card {
-    height: 33px;
-    width: 90px;
-    
-}
-
-@media (max-width:1200px) {
-   .add-to-card {width: 43px;} 
-   .comparison-btn {width: 46px !important}
-}
-
-.add-to-card img {
-    width: 15px;
-}
 
 .nav-link {
     color: #007bff;
@@ -100,8 +67,24 @@
 
 .favorite-card {
     width: 50px;
+    -webkit-mask: url(../img/catalog/favorite.svg) no-repeat center /30px;
+    mask: url(../img/catalog/favorite.svg) no-repeat center /30px;
 }
 
-.comparison-card {
+.favorite-btn.active {
+    background-color: #333;
+    -webkit-mask: url(../img/catalog/favorite-icon.svg) no-repeat center/30px;
+    mask: url(../img/catalog/favorite-icon.svg) no-repeat center /30px;
     width: 50px;
+}
+
+.card-image {
+    padding-right: 50px;
+}
+.add-to-card.active {
+    background-color: #333;
+}
+
+.buy-widget-container {
+    margin-top: 8px;
 }
